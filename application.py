@@ -6,8 +6,8 @@ import numpy as np
 
 app=Flask(__name__)
 cors=CORS(app)
-model=pickle.load(open(r'C:\Users\Dhruv Kumar\Desktop\car_price_predictor-master\car_price_predictor-master\LinearRegressionModel.pkl','rb'))
-car=pd.read_csv(r'C:\Users\Dhruv Kumar\Desktop\car_price_predictor-master\car_price_predictor-master\Cleaned_Car_data.csv')
+model=pickle.load(open('LinearRegressionModel.pkl','rb'))
+car=pd.read_csv('Cleaned_Car_data.csv')
 
 @app.route('/',methods=['GET','POST'])
 def index():
